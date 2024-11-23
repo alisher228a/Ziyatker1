@@ -6,8 +6,7 @@ export const connectToDB = async () => {
 
     try {
         if (connection.isConnected) return;
-        const db = await mongoose.connect(process.env.MONGO, {useNewUrlParser: true,
-            useUnifiedTopology: true,});
+        const db = await mongoose.connect("mongodb+srv://orrynbaia:alisher2007@cluster0.nyztgkb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
         connection.isConnected = db.connections[0].readyState;
     } catch (error) {
         console.log(error)
