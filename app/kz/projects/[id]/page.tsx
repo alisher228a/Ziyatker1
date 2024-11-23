@@ -13,29 +13,29 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
   }
 
   // Split project details into sentences
-  const sentences_goal = project.goal_kz.split('.').filter(sentence => sentence.trim() !== "");
-  const sentences_tasks = project.tasks_kz.split('.').filter(sentence => sentence.trim() !== "");
-  const achievements = project.achievements_kz.split('\n').filter(achievement => achievement.trim() !== "");
+  const sentences_goal = project.goal_kz.split('.').filter((sentence: string) => sentence.trim() !== "");
+  const sentences_tasks = project.tasks_kz.split('.').filter((sentence: string) => sentence.trim() !== "");
+  const achievements = project.achievements_kz.split('\n').filter((achievement: string) => achievement.trim() !== "");
 
   // Default color
   let color = "bg-green-main";
 
   if (project.title === "DebateNIS") {
       color = 'bg-[#0C235E]';
-    }
+  }
   if (project.title === "Стажировки в Сенатах Республики Казахстан") {
       color = "bg-[#42446B]";
-    }
+  }
   if (project.title === "Республиканская олимпиада по истории") {
       color = "bg-[#4A5C34]";
-    }
+  }
 
   return (
-    <section className="font-inter max-w-screen-lg mx-auto px-6 my-[100px] bg-white">
+    <section className="font-manrope max-w-screen-lg mx-auto px-6 my-[100px] bg-white">
       {/* Header Section */}
       <div className="flex items-center justify-between">
         <h1 className="text-3xl md:text-5xl sm:text-4xl font-bold">{project.title_kz}</h1>
-      <div className="flex items-center">
+        <div className="flex items-center">
           <Image
             src={project.image} 
             alt={project.title_kz}
@@ -75,9 +75,9 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
 
       {/* Project Essence Section */}
       <div className={`${color} text-white p-8 rounded-lg shadow-lg mt-10`}>
-        <h2 className="text-2xl font-semibold mb-6">ЖОБАНЫҢ МӘНІ</h2>
+        <h2 className="text-2xl font-semibold mb-6">ЖОБА ТУРАЛЫ:</h2>
         <p className="text-base">
-          {project.desc_kz}
+          {project.desc}
         </p>
       </div>
 
