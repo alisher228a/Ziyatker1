@@ -13,9 +13,9 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
   }
 
   // Split project details into sentences
-  const sentences_goal = project.goal_en.split('.').filter(sentence => sentence.trim() !== "");
-  const sentences_tasks = project.tasks_en.split('.').filter(sentence => sentence.trim() !== "");
-  const achievements = project.achievements_en.split('\n').filter(achievement => achievement.trim() !== "");
+  const sentences_goal = project.goal_en.split('.').filter((sentence: string) => sentence.trim() !== "");
+const sentences_tasks = project.tasks_en.split('.').filter((sentence: string) => sentence.trim() !== "");
+const achievements = project.achievements_en.split('\n').filter((achievement: string) => achievement.trim() !== "");
 
   // Default color
   let color = "bg-green-main";
