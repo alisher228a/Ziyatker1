@@ -13,9 +13,9 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
   }
 
   // Split project details into sentences
-  const sentences_goal = project.goal_en.split('.').filter((sentence: string) => sentence.trim() !== "");
-  const sentences_tasks = project.tasks_en.split('.').filter((sentence: string) => sentence.trim() !== "");
-  const achievements = project.achievements_en.split('\n').filter((achievement: string) => achievement.trim() !== "");
+  const sentences_goal: string[] = project.goal_en.split('.').filter((sentence: string) => sentence.trim() !== "");
+  const sentences_tasks: string[] = project.tasks_en.split('.').filter((sentence: string) => sentence.trim() !== "");
+  const achievements: string[] = project.achievements_en.split('\n').filter((achievement: string) => achievement.trim() !== "");
 
   // Default color
   let color = "bg-green-main";
@@ -52,7 +52,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
         <div className={`${color} text-white p-6 rounded-lg shadow-lg`}>
           <h2 className="text-2xl font-semibold mb-4">GOALS:</h2>
           <ul className="list-disc pl-6 space-y-2">
-            {sentences_goal.map((sentence, index) => (
+            {sentences_goal.map((sentence: string, index: number) => (
               <li key={index} className="text-base">
                 {sentence.trim()}.
               </li>
@@ -64,7 +64,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
         <div className={`${color} text-white p-6 rounded-lg shadow-lg`}>
           <h2 className="text-2xl font-semibold mb-4">TASKS:</h2>
           <ul className="list-disc pl-6 space-y-2">
-            {sentences_tasks.map((sentence, index) => (
+            {sentences_tasks.map((sentence: string, index: number) => (
               <li key={index} className="text-base">
                 {sentence.trim()}.
               </li>
@@ -85,7 +85,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
       <div className="mt-10">
         <h2 className="text-3xl font-semibold mb-6">ACHEIVEMENTS</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {achievements.map((achievement, index) => (
+          {achievements.map((achievement: string, index: number) => (
             <div key={index} className={`${color} text-white p-6 rounded-lg shadow-lg`}>
               <h3 className="text-xl font-semibold mb-4">{index + 1}</h3>
               <p>{achievement}</p>
