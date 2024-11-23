@@ -56,6 +56,7 @@ export const fetchProjects = async () => {
 
 export const fetchProjectById = async (id) => {
     try {
+        await connectToDB();
         const project = await Project.findById(id);
 
         if (!project) {
@@ -71,6 +72,7 @@ export const fetchProjectById = async (id) => {
 
 export const fetchMinistryById = async (id) => {
     try {
+        await connectToDB();
         const ministry = await Ministries.findById(id);
 
         if (!ministry) {
@@ -86,6 +88,7 @@ export const fetchMinistryById = async (id) => {
   
 export const fetchNewsById = async (id) => {
     try {
+        await connectToDB();
         const news = await News.findById(id);
 
         if (!news) {
@@ -101,6 +104,7 @@ export const fetchNewsById = async (id) => {
 
 export const increaseViewNews = async (id) => {
     try {
+        await connectToDB();
         const news = await News.findById(id);
 
         if (!news) {
