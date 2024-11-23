@@ -81,7 +81,7 @@ const Team = async () => {
 
             <div className='p-10 rounded-2xl shadow-lg bg-white'>
               <div className="relative h-[300px] w-[300px] hidden xl:flex">
-                <Image src="/zhanel.jpg" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full mx-auto object-[-50px]' />
+                <Image src="/zhanel.JPG" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full mx-auto object-[-50px]' />
               </div>
               <h2 className='text-3xl font-bold text-center pt-5'>Zhaner Kuatbekova</h2>
               <p className='text-lg text-center mt-4 text-gray-30'>+7 776 120 5485, NIS IB Astana</p>
@@ -95,7 +95,7 @@ const Team = async () => {
 
             <div className='p-10 rounded-2xl shadow-lg bg-white'>
               <div className="relative h-[300px] w-[300px] hidden xl:flex">
-                <Image src="/alikhan.png" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full object-[center_-50px]' />
+                <Image src="/alikhan.PNG" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full object-[center_-50px]' />
               </div>
               <h2 className='text-3xl font-bold text-center pt-5'>Alikhan Serikov</h2>
               <p className='text-lg text-center mt-4 text-gray-30'>+7 776 566 4014, NIS FMN Astana</p>
