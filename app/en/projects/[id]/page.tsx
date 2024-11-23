@@ -9,26 +9,26 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
   const project = await fetchProjectById(id);
 
   if (!project) {
-    return <div>The project was not found</div>;
+    return <div>Проект не найден</div>;
   }
 
   // Split project details into sentences
   const sentences_goal = project.goal_en.split('.').filter((sentence: string) => sentence.trim() !== "");
-const sentences_tasks = project.tasks_en.split('.').filter((sentence: string) => sentence.trim() !== "");
-const achievements = project.achievements_en.split('\n').filter((achievement: string) => achievement.trim() !== "");
+  const sentences_tasks = project.tasks_en.split('.').filter((sentence: string) => sentence.trim() !== "");
+  const achievements = project.achievements_en.split('\n').filter((achievement: string) => achievement.trim() !== "");
 
   // Default color
   let color = "bg-green-main";
 
   if (project.title === "DebateNIS") {
       color = 'bg-[#0C235E]';
-    }
+  }
   if (project.title === "Стажировки в Сенатах Республики Казахстан") {
       color = "bg-[#42446B]";
-    }
+  }
   if (project.title === "Республиканская олимпиада по истории") {
       color = "bg-[#4A5C34]";
-    }
+  }
 
   return (
     <section className="font-manrope max-w-screen-lg mx-auto px-6 my-[100px] bg-white">
@@ -77,13 +77,13 @@ const achievements = project.achievements_en.split('\n').filter((achievement: st
       <div className={`${color} text-white p-8 rounded-lg shadow-lg mt-10`}>
         <h2 className="text-2xl font-semibold mb-6">THE ESSENCE OF THE PROJECT:</h2>
         <p className="text-base">
-          {project.desc_en}
+          {project.desc}
         </p>
       </div>
 
       {/* Achievements Section */}
       <div className="mt-10">
-        <h2 className="text-3xl font-semibold mb-6">ACHIEVEMENTS</h2>
+        <h2 className="text-3xl font-semibold mb-6">ACHEIVEMENTS</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {achievements.map((achievement, index) => (
             <div key={index} className={`${color} text-white p-6 rounded-lg shadow-lg`}>
