@@ -24,7 +24,7 @@ const Team = async () => {
               }}
             ></div>
 
-            <h1 className="text-center font-extrabold text-[50px] sm:text-[55px] md:text-[60px] lg:text-[70px] uppercase text-black">
+            <h1 className="text-center font-extrabold text-[40px] sm:text-[55px] md:text-[60px] lg:text-[70px] uppercase text-black">
               Our team "<span className="text-green-50">Ziyatker</span>"
             </h1>
           </div>
