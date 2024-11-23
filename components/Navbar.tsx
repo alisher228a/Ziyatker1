@@ -70,7 +70,7 @@ const Navbar = () => {
 
             <div className="relative">
                 <Image 
-                    src="menu.svg"
+                    src="menu.png"
                     alt="menu"
                     width={32}
                     height={32}
