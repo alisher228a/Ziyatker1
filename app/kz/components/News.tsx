@@ -55,7 +55,7 @@ const News = async () => {
                   {/* Deadline Block */}
                   {newsItem.deadline && (
                     <div className="bg-red-500 text-white text-center py-2 font-semibold rounded-xl">
-                      Соңғы мерзім: {new Date(newsItem.deadline).toLocaleDateString('ru-RU')}
+                      <a className="hover:underline" href={`/news/${newsItem.id}`}>Соңғы мерзім: {new Date(newsItem.deadline).toLocaleDateString('ru-RU')}</a>
                     </div>
                   )}
 
