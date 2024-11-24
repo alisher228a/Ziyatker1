@@ -9,7 +9,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
   const project = await fetchProjectById(id);
 
   if (!project) {
-    return <div>Проект не найден</div>;
+    return <div>Project was not found</div>;
   }
 
   // Split project details into sentences
