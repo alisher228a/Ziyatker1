@@ -8,6 +8,11 @@ const MinistryDetails = async ({ params }: { params: { id: string } }) => {
   // Fetch the ministry details
   const ministry = await fetchMinistryById(id);
 
+  // Split ministry tasks into individual sentences
+  const tasks: string[] = ministry.tasks_kz
+    .split('.')
+    .filter((task: string) => task.trim() !== "");
+
   return (
     <section className="font-manrope my-[100px]">
       {/* Title Section */}
@@ -33,12 +38,16 @@ const MinistryDetails = async ({ params }: { params: { id: string } }) => {
             {/* Tasks */}
             <div>
               <h3 className="text-3xl font-bold mb-4">ТАПСЫРМАЛАР</h3>
-              <p className="text-xl">{ministry.tasks_kz}</p>
+              <ul className="list-disc pl-6 space-y-2 text-xl">
+                {tasks.map((task: string, index: number) => (
+                  <li key={index}>{task.trim()}.</li>
+                ))}
+              </ul>
             </div>
 
             {/* Goals */}
             <div>
-              <h3 className="text-3xl font-bold mb-4">МАҚСАТТАР</h3>
+              <h3 className="text-3xl font-bold mb-4">МАҚСАТ</h3>
               <p className="text-xl">{ministry.goal_kz}</p>
             </div>
           </div>
