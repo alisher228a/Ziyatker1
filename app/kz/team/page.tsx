@@ -127,7 +127,7 @@ const Team = async () =>  {
                 <div className="relative flex flex-col items-center pb-24 mb-20">
             <div className="w-full max-w-7xl px-8">
               <h1 className="text-4xl sm:text-5xl font-bold my-10 text-center">
-                Министрліктер
+                Министрліктер және Департаменттер
               </h1>
 
               <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
