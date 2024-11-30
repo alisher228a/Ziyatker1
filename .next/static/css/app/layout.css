@@ -957,6 +957,9 @@ video {
 .p-8{
   padding: 2rem;
 }
+.p-2{
+  padding: 0.5rem;
+}
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1118,6 +1121,9 @@ video {
 }
 .text-\[30px\]{
   font-size: 30px;
+}
+.text-\[40px\]{
+  font-size: 40px;
 }
 .font-bold{
   font-weight: 700;

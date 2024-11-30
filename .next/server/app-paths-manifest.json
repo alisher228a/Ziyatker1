@@ -3,6 +3,5 @@
   "/kz/news/[id]/page": "app/kz/news/[id]/page.js",
   "/page": "app/page.js",
   "/en/page": "app/en/page.js",
-  "/kz/page": "app/kz/page.js",
-  "/projects/[id]/page": "app/projects/[id]/page.js"
+  "/kz/page": "app/kz/page.js"
 }
