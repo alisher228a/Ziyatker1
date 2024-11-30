@@ -9,7 +9,7 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [navLinks, setNavLinks] = useState(NAV_LINKS);
-    const menuRef = useRef(null); // Ref для меню
+    const menuRef = useRef<HTMLDivElement>(null); // Specify the type
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,8 +27,8 @@ const Navbar = () => {
             }
         };
 
-        const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
                 setIsMenuOpen(false);
             }
         };
