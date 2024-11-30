@@ -1,7 +1,8 @@
 {
-  "/en/news/[id]/page": "app/en/news/[id]/page.js",
-  "/kz/news/[id]/page": "app/kz/news/[id]/page.js",
   "/page": "app/page.js",
-  "/en/page": "app/en/page.js",
-  "/kz/page": "app/kz/page.js"
+  "/news/page": "app/news/page.js",
+  "/news/[id]/page": "app/news/[id]/page.js",
+  "/kz/page": "app/kz/page.js",
+  "/kz/news/page": "app/kz/news/page.js",
+  "/kz/news/[id]/page": "app/kz/news/[id]/page.js"
 }

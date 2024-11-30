@@ -21,30 +21,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/news/[id]/page.js"
     ],
-    "/en/news/[id]/page": [
+    "/kz/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/en/news/[id]/page.js"
+      "static/chunks/app/kz/page.js"
+    ],
+    "/kz/news/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/kz/news/page.js"
     ],
     "/kz/news/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/kz/news/[id]/page.js"
-    ],
-    "/projects/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/projects/[id]/page.js"
-    ],
-    "/en/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/en/page.js"
-    ],
-    "/kz/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/kz/page.js"
     ]
   }
 }
