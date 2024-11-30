@@ -9,7 +9,7 @@ const MinistryDetails = async ({ params }: { params: { id: string } }) => {
   const ministry = await fetchMinistryById(id);
 
   return (
-    <section className="font-manrope my-[100px]">
+    <section className="font-inter my-[100px]">
       {/* Title Section */}
       <div className="text-center px-8 py-16">
         <h1 className="text-5xl sm:text-6xl font-extrabold text-black">

@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const LanguageSelector = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('RU');
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null); // Ref для отслеживания кликов вне компонента
 
   useEffect(() => {
     const currentPath = window.location.pathname;
@@ -17,14 +18,13 @@ const LanguageSelector = () => {
 
   const handleChange = (language) => {
     setSelectedLanguage(language);
-    setIsOpen(false); // Close the dropdown after selection
+    setIsOpen(false); // Закрыть выпадающее меню после выбора
 
-    // Dynamically build the new path with language prefix
     const currentPath = window.location.pathname;
-    let newPath = currentPath.replace(/^\/(en|kz)/, ''); // Remove existing language prefix
+    let newPath = currentPath.replace(/^\/(en|kz)/, ''); // Удалить текущий язык из пути
 
     if (newPath === '') {
-      newPath = '/'; // Default to root if path is empty
+      newPath = '/'; // Если путь пустой, то перейти к корню
     }
 
     if (language === 'EN') {
@@ -33,7 +33,6 @@ const LanguageSelector = () => {
       newPath = `/kz${newPath}`;
     }
 
-    // Use setTimeout to ensure the state update is processed before navigating
     setTimeout(() => {
       window.location.href = newPath;
     }, 0);
@@ -52,8 +51,22 @@ const LanguageSelector = () => {
     }
   };
 
+  // Закрытие меню при клике за пределами
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false); // Закрыть меню
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left" ref={dropdownRef}>
       <div>
         <button
           type="button"

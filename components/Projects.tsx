@@ -6,7 +6,7 @@ const Projects = async () => {
   const projects = await fetchProjects();
 
   return (
-    <section className="font-manrope flex-col flexCenter overflow-hidden bg-green-main my-20">
+    <section className="font-inter flex-col flexCenter overflow-hidden bg-green-main my-20">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="z-20 flex w-full flex-col items-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-10">Проекты</h1>

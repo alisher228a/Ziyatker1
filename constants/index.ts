@@ -85,7 +85,7 @@
     title: 'Контакты',
     links: [
       { label: 'Жанель', value: '8 776 120 5485' },
-      { label: 'Почта', value: 'hilink@akinthil.com' },
+      { label: 'Почта', value: 'kuatbekova.zh@nisa.edu.kz' },
     ],
   };
   
@@ -93,7 +93,7 @@
     title: 'Контакты',
     links: [
       { label: 'Жанель', value: '8 776 120 5485' },
-      { label: 'Почта', value: 'hilink@akinthil.com' },
+      { label: 'Почта', value: 'kuatbekova.zh@nisa.edu.kz' },
     ],
   };
   
@@ -101,7 +101,7 @@
     title: 'Contacts',
     links: [
       { label: 'Zhanel', value: '8 776 120 5485' },
-      { label: 'Email', value: 'hilink@akinthil.com' },
+      { label: 'Email', value: 'kuatbekova.zh@nisa.edu.kz' },
     ],
   };
 

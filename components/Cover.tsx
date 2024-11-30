@@ -5,11 +5,11 @@ import { UserIcon } from '@heroicons/react/24/solid';
 
 const Cover = () => {
   return (
-    <section id="about_us" className='font-extrabold max-container padding-container flex flex-col gap-20 py-32 md:gap-28 lg:py-20 xl:flex-row mt-10 md:mb-10'>
-      <div className='relative z-20 flex flex-1 flex-col xl:w-1/2 m-2 mb-0 md:m-10 bg-[#f3fbf7] px-10 py-10 top-[-40px] h-[600px] rounded-5xl'>
-      <h1 className="font-extrabold text-[35px] sm:text-[35px] md:text-[55px] lg:text-[70px]">
+    <section id="about_us" className='font-inter font-bold max-container padding-container flex flex-col gap-20 py-32 md:gap-28 lg:py-20 xl:flex-row mt-10 md:mb-10'>
+      <div className='relative z-20 flex flex-1 flex-col xl:w-1/2 m-2 mb-0 md:m-10 bg-[#f3fbf7] px-5 md:px-10 py-10 top-[-40px] h-[600px] rounded-5xl'>
+      <h1 className="ml-3 font-bold text-[35px] sm:text-[35px] md:text-[55px] lg:text-[70px]">
       Молодежная Организация <span className='text-green-50'>"Ziyatker"</span></h1>
-        <p className='regular-16 mt-3 text-gray-30 xl:max-w-[520px]'>Республиканская Молодежная Организация, работающая с поддержкой АОО НИШ.</p>
+        <p className='ml-3 regular-16 mt-3 text-gray-30 xl:max-w-[520px]'>Республиканская Молодежная Организация, работающая с поддержкой АОО НИШ.</p>
         <br />
         <div className='flex flex-col w-full gap-3 sm:flex-row'>
           <Button 

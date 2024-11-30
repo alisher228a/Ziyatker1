@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section id="about" className="font-sans flex-col flexCenter overflow-hidden pb-24">
+    <section id="about" className="font-inter flex-col flexCenter overflow-hidden pb-24">
       <div className="max-container padding-container relative w-full justify-between lg:flex lg:space-x-12">
         <div className="relative w-full lg:w-1/2 flex flex-col justify-start">
           <div className="relative mx-auto w-[70%] hidden md:flex h-[400px] z-10">
@@ -18,7 +18,7 @@ const About = () => {
 
           <div className="relative mt-[-120px] bg-green-main p-10 pt-40 text-white z-0">
             <h2 className="text-[35px] xl:text-[75px] md:text-[55px] font-extrabold pb-8">О НАС</h2>
-            <p className="text-lg">
+            <p className="text-md md:text-lg">
               Проект Ziyatker направлен на развитие талантов и профессиональных навыков учащихся 
               Назарбаев Интеллектуальных Школ (НИШ) через стажировки, дебаты и другие инициативы, способствующие 
               интеграции молодежи в различные сферы экономики и государственной службы.

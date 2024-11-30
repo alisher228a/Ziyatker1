@@ -77,7 +77,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
       <div className={`${color} text-white p-8 rounded-lg shadow-lg mt-10`}>
         <h2 className="text-2xl font-semibold mb-6">THE ESSENCE OF THE PROJECT:</h2>
         <p className="text-base">
-          {project.desc}
+          {project.desc_en}
         </p>
       </div>
 

@@ -53,11 +53,13 @@ const News = async () => {
                 {/* Bottom Section */}
                 <div className="mt-auto">
                   {/* Deadline Block */}
-                  {newsItem.deadline && (
-                    <div className="bg-red-500 text-white text-center py-2 font-semibold rounded-xl">
-                      Deadline: {new Date(newsItem.deadline).toLocaleDateString('ru-RU')}
-                    </div>
-                  )}
+                  <div className="bg-red-500 text-white text-center py-2 font-semibold rounded-xl">
+                  <a className="hover:underline" href={`/en/news/${newsItem.id}`}>
+                  {newsItem.deadline
+                    ? `Deadline: ${new Date(newsItem.deadline).toLocaleDateString('ru-RU')}`
+                    : 'No deadline is specified'}
+                  </a>
+                  </div>
 
                   {/* Meta Information */}
                   <div className="flex justify-between items-center p-5 rounded-b-lg border-t">

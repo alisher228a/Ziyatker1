@@ -41,16 +41,14 @@ const NewsDetails = async ({ params }: { params: { id: string } }) => {
 
         {/* Title Section */}
         <div className="flex items-center justify-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-left">
+          <h1 className="text-[22px] sm:text-3xl md:text-4xl min-[420px]:text-2xl font-extrabold text-left text-[#333333]">
             {news.desc}
           </h1>
         </div>
       </div>
 
-      <div className="mt-10">
-      <h2 className="text-xl md:text-3xl font-semibold mb-6">Подробности</h2>
-      <hr /> <br />
-      <div className="text-gray-700 text-base md:text-lg">
+      <div className="mt-5">
+      <div className="text-[#333333] text-[18px] font-normal leading-8">
         {typeof news_explanation === 'string' ? (
           <div dangerouslySetInnerHTML={{ __html: news_explanation }} />
         ) : (
@@ -62,6 +60,7 @@ const NewsDetails = async ({ params }: { params: { id: string } }) => {
         )}
       </div>
     </div>
+    
       {/* Meta Info Section */}
       <div className="flex sm:flex-row flex-wrap justify-between items-center mt-6 border-t pt-6 text-gray-500 text-sm md:text-base">
         <p>{new Date(news.updatedAt).toLocaleDateString('ru-RU')}</p>

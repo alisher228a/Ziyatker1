@@ -2,13 +2,14 @@
 import { NAV_LINKS, NAV_LINKS_KZ, NAV_LINKS_EN } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import LanguageSelector from "./LanguageSelector";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [navLinks, setNavLinks] = useState(NAV_LINKS);
+    const menuRef = useRef(null); // Ref для меню
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,11 +27,19 @@ const Navbar = () => {
             }
         };
 
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
+        document.addEventListener('mousedown', handleClickOutside);
         updateNavLinks();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
@@ -68,7 +77,7 @@ const Navbar = () => {
                 <LanguageSelector />
             </div>
 
-            <div className="relative">
+            <div className="relative" ref={menuRef}>
                 <Image 
                     src="menu.svg"
                     alt="menu"

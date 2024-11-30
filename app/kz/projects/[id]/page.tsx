@@ -31,7 +31,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <section className="font-manrope max-w-screen-lg mx-auto px-6 my-[100px] bg-white">
+    <section className="font-inter max-w-screen-lg mx-auto px-6 my-[100px] bg-white">
       {/* Header Section */}
       <div className="flex items-center justify-between">
         <h1 className="text-3xl md:text-5xl sm:text-4xl font-bold">{project.title_kz}</h1>
@@ -62,7 +62,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
 
         {/* Tasks */}
         <div className={`${color} text-white p-6 rounded-lg shadow-lg`}>
-          <h2 className="text-2xl font-semibold mb-4">ТАПСЫРМАЛАР:</h2>
+          <h2 className="text-2xl font-semibold mb-4">МІНДЕТТЕР:</h2>
           <ul className="list-disc pl-6 space-y-2">
             {sentences_tasks.map((sentence, index) => (
               <li key={index} className="text-base">
@@ -77,7 +77,7 @@ const ProjectDetails = async ({ params }: { params: { id: string } }) => {
       <div className={`${color} text-white p-8 rounded-lg shadow-lg mt-10`}>
         <h2 className="text-2xl font-semibold mb-6">ЖОБА ТУРАЛЫ:</h2>
         <p className="text-base">
-          {project.desc}
+          {project.desc_kz}
         </p>
       </div>
 
