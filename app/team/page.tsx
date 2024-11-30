@@ -24,7 +24,7 @@ const Team = async () =>  {
               }}
             ></div>
 
-            <h1 className="text-center font-extrabold text-[50px] sm:text-[55px] md:text-[60px] lg:text-[70px] uppercase text-black">
+            <h1 className="text-center font-extrabold text-[40px] sm:text-[55px] md:text-[60px] lg:text-[70px] uppercase text-black">
               Наша команда "<span className="text-green-50">Ziyatker</span>"
             </h1>
           </div>
@@ -82,7 +82,7 @@ const Team = async () =>  {
 
             <div className='p-10 rounded-2xl shadow-lg bg-white'>
               <div className="relative h-[300px] w-[300px] hidden xl:flex">
-                <Image src="/zhanel.jpg" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full mx-auto object-[-50px]' />
+                <Image src="/zhanel.JPG" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full mx-auto object-[-50px]' />
               </div>
               <h2 className='text-3xl font-bold text-center pt-5'>Жанель Куатбекова</h2>
               <p className='text-lg text-center mt-4 text-gray-30'>+7 776 120 5485, НИШ IB Астана</p>
@@ -96,7 +96,7 @@ const Team = async () =>  {
 
             <div className='p-10 rounded-2xl shadow-lg bg-white'>
               <div className="relative h-[300px] w-[300px] hidden xl:flex">
-                <Image src="/alikhan.png" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full object-[center_-50px]' />
+                <Image src="/alikhan.PNG" alt="Заместитель" fill style={{ objectFit: "cover" }} className='rounded-full object-[center_-50px]' />
               </div>
               <h2 className='text-3xl font-bold text-center pt-5'>Алихан Сериков</h2>
               <p className='text-lg text-center mt-4 text-gray-30'>+7 776 566 4014, НИШ ФМН Астана</p>

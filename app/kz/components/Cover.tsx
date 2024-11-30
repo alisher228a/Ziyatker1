@@ -14,13 +14,11 @@ const Cover = () => {
         <br />
         <div className='flex flex-col w-full gap-3 sm:flex-row'>
           <Button 
-            type="button"
             title="Жобалар"
             variant="btn_green"
             action="kz/projects"
           />
           <Button 
-            type="button"
             title="Жаңалықтар Лентасы"
             icon="/play.svg"
             variant="btn_white_text"

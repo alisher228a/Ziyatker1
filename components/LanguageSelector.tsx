@@ -93,7 +93,7 @@ const LanguageSelector = () => {
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
-          tabIndex="-1"
+          tabIndex={-1}
         >
           <div className="py-1" role="none">
             <button

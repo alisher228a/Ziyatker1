@@ -79,7 +79,7 @@ const Navbar = () => {
 
             <div className="relative" ref={menuRef}>
                 <Image 
-                    src="menu.svg"
+                    src="menu.png"
                     alt="menu"
                     width={32}
                     height={32}
