@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 const LanguageSelector = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('RU');
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null); // Ref для отслеживания кликов вне компонента
+  const dropdownRef = useRef<HTMLDivElement>(null); // Specify type explicitly
 
   useEffect(() => {
     const currentPath = window.location.pathname;
@@ -16,15 +16,15 @@ const LanguageSelector = () => {
     }
   }, []);
 
-  const handleChange = (language) => {
+  const handleChange = (language: string) => {
     setSelectedLanguage(language);
-    setIsOpen(false); // Закрыть выпадающее меню после выбора
+    setIsOpen(false);
 
     const currentPath = window.location.pathname;
-    let newPath = currentPath.replace(/^\/(en|kz)/, ''); // Удалить текущий язык из пути
+    let newPath = currentPath.replace(/^\/(en|kz)/, '');
 
     if (newPath === '') {
-      newPath = '/'; // Если путь пустой, то перейти к корню
+      newPath = '/';
     }
 
     if (language === 'EN') {
@@ -51,11 +51,10 @@ const LanguageSelector = () => {
     }
   };
 
-  // Закрытие меню при клике за пределами
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false); // Закрыть меню
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
       }
     };
 
